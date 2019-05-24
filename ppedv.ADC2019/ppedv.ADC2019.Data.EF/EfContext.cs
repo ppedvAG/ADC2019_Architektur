@@ -23,5 +23,14 @@ namespace ppedv.ADC2019.Data.EF
         {
 
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+
+            //msdn.com/data/ef
+            modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.PluralizingTableNameConvention>();
+
+            modelBuilder.Entity<Auto>().Property(x => x.Farbe).IsRequired();
+        }
     }
 }
