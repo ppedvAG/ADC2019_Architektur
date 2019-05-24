@@ -3,6 +3,8 @@ using ppedv.ADC2019.Data.EF;
 using ppedv.ADC2019.Model;
 using ppedv.ADC2019.Model.Contracts;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ppedv.ADC2019.Logic
 {
@@ -19,6 +21,16 @@ namespace ppedv.ADC2019.Logic
         {
 
         }
+
+        public IEnumerable<Kunde> GetAllKundenDieSeitXTagenNichtMehrGebuchtHaben(int tage, DateTime heute)
+        {
+            return UnitOfWork.GetRepo<Kunde>()
+                             .Query()
+                             .Where(x => x.Vermietungen.Count() > 0 &&
+                                        (heute - x.Vermietungen.OrderBy(y => y.Ende).FirstOrDefault().Ende).TotalDays > tage);
+        }
+
+
 
         public void CreateDemoData()
         {
