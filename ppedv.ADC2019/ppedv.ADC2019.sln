@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ADC2019.UI.DevConsole
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ADC2019.Logic.Tests", "ppedv.ADC2019.Logic.Tests\ppedv.ADC2019.Logic.Tests.csproj", "{C5F20F1D-7DF5-4876-97DF-CE63EC895216}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ADC2019.UI.Web", "ppedv.ADC2019.UI.Web\ppedv.ADC2019.UI.Web.csproj", "{4FE17CBA-1D60-4351-ADD4-FDC758354641}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C5F20F1D-7DF5-4876-97DF-CE63EC895216}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5F20F1D-7DF5-4876-97DF-CE63EC895216}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5F20F1D-7DF5-4876-97DF-CE63EC895216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE17CBA-1D60-4351-ADD4-FDC758354641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE17CBA-1D60-4351-ADD4-FDC758354641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE17CBA-1D60-4351-ADD4-FDC758354641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE17CBA-1D60-4351-ADD4-FDC758354641}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
