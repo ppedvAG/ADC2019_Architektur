@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ADC2019.Model", "ppedv.ADC2019.Model\ppedv.ADC2019.Model.csproj", "{EF4454F1-6F84-4770-B3BF-9412923B8797}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF4454F1-6F84-4770-B3BF-9412923B8797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4454F1-6F84-4770-B3BF-9412923B8797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4454F1-6F84-4770-B3BF-9412923B8797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4454F1-6F84-4770-B3BF-9412923B8797}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3311C6C2-9A58-4BE6-BF61-1B190663C7CE}
+	EndGlobalSection
+EndGlobal
