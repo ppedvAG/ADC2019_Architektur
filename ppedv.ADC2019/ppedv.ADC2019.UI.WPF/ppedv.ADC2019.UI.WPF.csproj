@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\AutoViewModel.cs" />
     <Compile Include="Views\AutoView.xaml.cs">
       <DependentUpon>AutoView.xaml</DependentUpon>
     </Compile>
@@ -102,7 +103,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <Content Include="..\ppedv.ADC2019.Data.EF\bin\Debug\EntityFramework.SqlServer.dll">
+      <Link>EntityFramework.SqlServer.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.ADC2019.Logic\ppedv.ADC2019.Logic.csproj">
+      <Project>{3e67d03f-ad22-48e1-b045-065c056aa862}</Project>
+      <Name>ppedv.ADC2019.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.ADC2019.Model\ppedv.ADC2019.Model.csproj">
+      <Project>{ef4454f1-6f84-4770-b3bf-9412923b8797}</Project>
+      <Name>ppedv.ADC2019.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,8 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ppedv.ADC2019.UI.WPF.Views"
+             xmlns:vm="clr-namespace:ppedv.ADC2019.UI.WPF.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:AutoViewModel/>
+    </UserControl.DataContext>
     <DockPanel>
         <WrapPanel Margin="12" DockPanel.Dock="Top">
             <Button>Laden</Button>
@@ -13,7 +17,7 @@
             <Button>Neu</Button>
             <Button>Löschen</Button>
         </WrapPanel>
-        <DataGrid Width="200" DockPanel.Dock="Left"/>
+        <DataGrid ItemsSource="{Binding Autos}" Width="200" DockPanel.Dock="Left"/>
         <StackPanel>
             <Label>Herstell</Label>
             <TextBox></TextBox>
