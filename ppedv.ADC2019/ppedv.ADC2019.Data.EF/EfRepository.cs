@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ppedv.ADC2019.Data.EF
 {
-    public class EfRepository : IRepository
+    public class EfRepository : IRepository,IDisposable
     {
         EfContext con = new EfContext();
 
@@ -23,6 +23,11 @@ namespace ppedv.ADC2019.Data.EF
         {
             con.Set<T>().Remove(entity);
 
+        }
+
+        public void Dispose()
+        {
+            con.Dispose();
         }
 
         public IEnumerable<T> GetAll<T>() where T : Entity
