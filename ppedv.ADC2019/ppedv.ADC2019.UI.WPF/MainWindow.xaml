@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ppedv.ADC2019.UI.WPF"
+        xmlns:views="clr-namespace:ppedv.ADC2019.UI.WPF.Views"
         mc:Ignorable="d" FontSize="16"
         Title="MainWindow" Height="450" Width="600">
 
@@ -18,7 +19,7 @@
         <StatusBar Height="24" Background="SandyBrown" DockPanel.Dock="Bottom"/>
         <TabControl >
             <TabItem Header="Autos">
-
+                <views:AutoView/>
             </TabItem>
             <TabItem Header="Kunden">
 

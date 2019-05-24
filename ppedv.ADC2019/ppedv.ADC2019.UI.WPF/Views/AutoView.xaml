@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="ppedv.ADC2019.UI.WPF.Views.AutoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ppedv.ADC2019.UI.WPF.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <WrapPanel Margin="12" DockPanel.Dock="Top">
+            <Button>Laden</Button>
+            <Button>Speichern</Button>
+            <Button>Neu</Button>
+            <Button>Löschen</Button>
+        </WrapPanel>
+        <DataGrid Width="200" DockPanel.Dock="Left"/>
+        <StackPanel>
+            <Label>Herstell</Label>
+            <TextBox></TextBox>
+            <Label>Modell</Label>
+            <TextBox></TextBox>
+            <Label>Farbe</Label>
+            <TextBox></TextBox>
+        </StackPanel>
+    </DockPanel>
+</UserControl>
