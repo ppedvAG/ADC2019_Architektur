@@ -1,6 +1,5 @@
 ﻿using ppedv.ADC2019.Model;
 using ppedv.ADC2019.Model.Contracts;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,40 +49,6 @@ namespace ppedv.ADC2019.Data.EF
             {
                 con.Entry(loaded).CurrentValues.SetValues(entity);
             }
-        }
-    }
-
-    public class EfAutoRepository : EfRepository<Auto>, IAutoRepository
-    {
-        public EfAutoRepository(EfContext con) : base(con)
-        { }
-
-        public IEnumerable<Auto> GetAlleAutoDieBlauSind()
-        {
-            return con.Autos.Where(x => x.Farbe == "blau");
-        }
-    }
-
-
-    public class EfUnitOfWork : IUnitOfWork, IDisposable
-    {
-        EfContext con = new EfContext();
-
-        public IAutoRepository AutoRepository => new EfAutoRepository(con);
-
-        public void Dispose()
-        {
-            con.Dispose();
-        }
-
-        public IRepository<T> GetRepo<T>() where T : Entity
-        {
-            return new EfRepository<T>(con);
-        }
-
-        public void SaveAll()
-        {
-            con.SaveChanges();
         }
     }
 }

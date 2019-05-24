@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EfAutoRepository.cs" />
     <Compile Include="EfContext.cs" />
     <Compile Include="EfRepository.cs" />
+    <Compile Include="EfUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
