@@ -24,6 +24,9 @@ namespace ppedv.ADC2019.Logic
 
         public IEnumerable<Kunde> GetAllKundenDieSeitXTagenNichtMehrGebuchtHaben(int tage, DateTime heute)
         {
+            if (tage < 0)
+                throw new ArgumentException();
+
             return UnitOfWork.GetRepo<Kunde>()
                              .Query()
                              .Where(x => x.Vermietungen.Count() > 0 &&

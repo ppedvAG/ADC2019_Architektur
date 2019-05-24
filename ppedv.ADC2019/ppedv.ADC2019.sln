@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ADC2019.Logic", "pped
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ADC2019.UI.DevConsole", "ppedv.ADC2019.UI.DevConsole\ppedv.ADC2019.UI.DevConsole.csproj", "{55758F37-6C67-4EFC-A119-4B164D8199BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ADC2019.Logic.Tests", "ppedv.ADC2019.Logic.Tests\ppedv.ADC2019.Logic.Tests.csproj", "{C5F20F1D-7DF5-4876-97DF-CE63EC895216}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{55758F37-6C67-4EFC-A119-4B164D8199BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55758F37-6C67-4EFC-A119-4B164D8199BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55758F37-6C67-4EFC-A119-4B164D8199BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F20F1D-7DF5-4876-97DF-CE63EC895216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F20F1D-7DF5-4876-97DF-CE63EC895216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F20F1D-7DF5-4876-97DF-CE63EC895216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F20F1D-7DF5-4876-97DF-CE63EC895216}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
