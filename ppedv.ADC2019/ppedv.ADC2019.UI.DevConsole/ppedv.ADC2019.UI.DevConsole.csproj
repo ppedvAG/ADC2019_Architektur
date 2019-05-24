@@ -60,6 +60,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\..\..\..\.nuget\packages\bogus\27.0.1\lib\netstandard2.0\Bogus.dll">
+      <Link>Bogus.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\ppedv.ADC2019.Data.EF\bin\Debug\EntityFramework.SqlServer.dll">
       <Link>EntityFramework.SqlServer.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

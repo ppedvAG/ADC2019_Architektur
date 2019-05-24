@@ -15,6 +15,9 @@ namespace ppedv.ADC2019.UI.DevConsole
             Console.WriteLine("*** ADC 2019 v01 ***");
 
             var core = new Core();
+            core.CreateDemoData();
+
+            Console.WriteLine($"{core.Repository.Query<Auto>().Count()} Autos in DB");
             foreach (var a in core.Repository.GetAll<Auto>())
             {
                 Console.WriteLine($"Farbe: {a.Farbe}, Hersteller: {a.Hersteller}, Modell: {a.Modell}");
