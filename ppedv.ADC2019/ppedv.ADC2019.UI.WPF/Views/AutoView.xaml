@@ -13,18 +13,18 @@
     <DockPanel>
         <WrapPanel Margin="12" DockPanel.Dock="Top">
             <Button>Laden</Button>
-            <Button>Speichern</Button>
+            <Button Command="{Binding SaveCommand}">Speichern</Button>
             <Button>Neu</Button>
             <Button>Löschen</Button>
         </WrapPanel>
-        <DataGrid ItemsSource="{Binding Autos}" Width="200" DockPanel.Dock="Left"/>
+        <DataGrid SelectedItem="{Binding SelectedAuto}" ItemsSource="{Binding Autos}" Width="200" DockPanel.Dock="Left"/>
         <StackPanel>
             <Label>Herstell</Label>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding SelectedAuto.Hersteller}"></TextBox>
             <Label>Modell</Label>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding SelectedAuto.Modell}"></TextBox>
             <Label>Farbe</Label>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding SelectedAuto.Farbe}"></TextBox>
         </StackPanel>
     </DockPanel>
 </UserControl>
