@@ -4,13 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ppedv.ADC2019.UI.WPF"
-        mc:Ignorable="d" FontSize="30"
-        Title="MainWindow" Height="450" Width="400">
-    <Grid> 
-        <StackPanel Margin="16">
-            <TextBox x:Name="tb1" />
-            <TextBox  Text="{Binding ElementName=tb1,Path=Text}" 
-                       Background="{Binding ElementName=tb1,Path=Text}" />
-        </StackPanel>
-    </Grid>
+        mc:Ignorable="d" FontSize="16"
+        Title="MainWindow" Height="450" Width="600">
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datei">
+                <MenuItem Header="Öffnen"/>
+                <Separator/>
+                <MenuItem Header="Beednen"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar Height="24" Background="SandyBrown" DockPanel.Dock="Bottom"/>
+        <TabControl >
+            <TabItem Header="Autos">
+
+            </TabItem>
+            <TabItem Header="Kunden">
+
+            </TabItem>
+            <TabItem Header="Vermietungen">
+
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+
 </Window>
