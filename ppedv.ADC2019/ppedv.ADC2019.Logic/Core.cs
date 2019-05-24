@@ -8,14 +8,14 @@ namespace ppedv.ADC2019.Logic
 {
     public class Core
     {
-        public IRepository Repository { get; private set; }
+        public IUnitOfWork UnitOfWork { get; private set; }
 
-        public Core(IRepository repo) //di in here
+        public Core(IUnitOfWork uow) //di in here
         {
-            Repository = repo;
+            UnitOfWork = uow;
         }
 
-        public Core() : this(new Data.EF.EfRepository())
+        public Core() : this(new Data.EF.EfUnitOfWork())
         {
 
         }
@@ -50,11 +50,11 @@ namespace ppedv.ADC2019.Logic
             var vm2 = new Vermietung() { StartStandort = s1, ZielStandort = s1, Auto = a2, Kunde = k2, Datum = DateTime.Now.AddDays(-95), Ende = DateTime.Now.AddDays(-87) };
             var vm3 = new Vermietung() { StartStandort = s2, ZielStandort = s2, Auto = a3, Kunde = k3, Datum = DateTime.Now.AddDays(-45), Ende = DateTime.Now.AddDays(-31) };
 
-            Repository.Add(vm1);
-            Repository.Add(vm2);
-            Repository.Add(vm3);
+            UnitOfWork.GetRepo<Vermietung>().Add(vm1);
+            UnitOfWork.GetRepo<Vermietung>().Add(vm2);
+            UnitOfWork.GetRepo<Vermietung>().Add(vm3);
 
-            Repository.SaveAll();
+            UnitOfWork.SaveAll();
 
         }
 

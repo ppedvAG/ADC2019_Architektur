@@ -17,8 +17,8 @@ namespace ppedv.ADC2019.UI.DevConsole
             var core = new Core();
             core.CreateDemoData();
 
-            Console.WriteLine($"{core.Repository.Query<Auto>().Count()} Autos in DB");
-            foreach (var a in core.Repository.GetAll<Auto>())
+            Console.WriteLine($"{core.UnitOfWork.AutoRepository.Query().Count()} Autos in DB");
+            foreach (var a in core.UnitOfWork.GetRepo<Auto>().GetAll())
             {
                 Console.WriteLine($"Farbe: {a.Farbe}, Hersteller: {a.Hersteller}, Modell: {a.Modell}");
             }
